@@ -3,13 +3,16 @@ package com.example.graphicassignment;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.scene.web.WebView;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class VideoController implements Initializable {
-    public WebView webView;
+    public WebView webView = new WebView();
+    public TextField text_user;
+    VideoApplication videoApplication = new VideoApplication();
     @FXML
     private Button btn_play;
     @FXML
@@ -21,25 +24,29 @@ public class VideoController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        WebView webview = new WebView();
-        webview.getEngine().load( "https://streamable.com/e/shil2");
 
-        webview.setPrefSize(640, 390);
+        videoApplication.InitializeVideoApplication(webView);
+        Thread videoThread = new Thread(videoApplication);
+        videoThread.start();
     }
-    @FXML
-    private void onClick_btn_stop(){
 
-    }
     @FXML
-    private void onClick_btn_play(){
+    private void onClick_btn_stop() {
 
     }
+
     @FXML
-    private void onClick_btn_log(){
+    private void onClick_btn_play() {
 
     }
+
     @FXML
-    private void onClick_btn_back(){
+    private void onClick_btn_log() {
+
+    }
+
+    @FXML
+    private void onClick_btn_back() {
 
     }
 }

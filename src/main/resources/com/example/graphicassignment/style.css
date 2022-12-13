@@ -1,8 +1,7 @@
-.text-field{
--fx-faint-focus-color: transparent;
--fx-focus-color: transparent;
+.text{
+-fx-background-color: none
 }
 
-.background{
--fx-background-color: #000000
+.text-field{
+-fx-background-color: white
 }
