@@ -1,72 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.web.WebView?>
-
-<VBox maxHeight="480.0" maxWidth="640.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.graphicassignment.VideoController">
-   <children>
-      <AnchorPane>
-         <children>
-            <TextField fx:id="text_user" accessibleRole="TEXT" alignment="CENTER" editable="false" maxHeight="30.0" maxWidth="640.0" stylesheets="@../style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </TextField>
-         </children>
-      </AnchorPane>
-    <AnchorPane minHeight="360.0" minWidth="640.0" styleClass="background" stylesheets="@../style.css">
-         <children>
-            <WebView fx:id="webView" maxHeight="360.0" maxWidth="640.0" minHeight="-1.0" minWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" stylesheets="@../style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-         </children>
-      </AnchorPane>
-    <AnchorPane>
-         <children>
-            <HBox alignment="BOTTOM_LEFT" fillHeight="false" layoutY="19.0" maxHeight="30.0" maxWidth="640.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
-               <children>
-                  <AnchorPane>
-                     <children>
-                        <Button fx:id="btn_play" maxHeight="30.0" mnemonicParsing="false" onAction="#onClick_btn_play" prefWidth="159.0" text="Play" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                           <font>
-                              <Font size="14.0" />
-                           </font>
-                        </Button>
-                     </children>
-                  </AnchorPane>
-                  <AnchorPane>
-                     <children>
-                        <Button fx:id="btn_stop" maxHeight="30.0" mnemonicParsing="false" onAction="#onClick_btn_stop" prefWidth="159.0" text="Stop" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                           <font>
-                              <Font size="14.0" />
-                           </font>
-                        </Button>
-                     </children>
-                  </AnchorPane>
-                  <AnchorPane>
-                     <children>
-                        <Button fx:id="btn_log" maxHeight="30.0" mnemonicParsing="false" onAction="#onClick_btn_log" prefWidth="160.0" text="View log" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                           <font>
-                              <Font size="14.0" />
-                           </font>
-                        </Button>
-                     </children>
-                  </AnchorPane>
-                  <AnchorPane>
-                     <children>
-                        <Button fx:id="btn_back" maxHeight="30.0" mnemonicParsing="false" onAction="#onClick_btn_back" prefWidth="160.0" text="Go back" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                           <font>
-                              <Font size="14.0" />
-                           </font>
-                        </Button>
-                     </children>
-                  </AnchorPane>
-               </children>
-            </HBox>
-         </children>
-      </AnchorPane>
-   </children>
+<VBox maxHeight="480.0" maxWidth="640.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.graphicassignment.VideoController">
+    <children>
+        <AnchorPane>
+            <children>
+                <TextField fx:id="text_user" accessibleRole="TEXT" alignment="CENTER" editable="false" maxHeight="30.0"
+                           maxWidth="640.0" stylesheets="@../style.css" AnchorPane.bottomAnchor="0.0"
+                           AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <font>
+                        <Font size="18.0"/>
+                    </font>
+                </TextField>
+            </children>
+        </AnchorPane>
+        <AnchorPane minHeight="360.0" minWidth="640.0" styleClass="background" stylesheets="@../style.css">
+            <children>
+                <WebView fx:id="webView" maxHeight="360.0" maxWidth="640.0" minHeight="-1.0" minWidth="-1.0"
+                         prefHeight="-1.0" prefWidth="-1.0" stylesheets="@../style.css" AnchorPane.bottomAnchor="0.0"
+                         AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+            </children>
+        </AnchorPane>
+        <AnchorPane>
+            <children>
+                <HBox alignment="BOTTOM_LEFT" fillHeight="false" layoutY="19.0" maxHeight="30.0" maxWidth="640.0"
+                      AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                    <children>
+                        <AnchorPane>
+                            <children>
+                                <Button fx:id="btn_play" maxHeight="30.0" mnemonicParsing="false"
+                                        onAction="#onClick_btn_play" prefWidth="159.0" text="Play"
+                                        AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                        AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <font>
+                                        <Font size="14.0"/>
+                                    </font>
+                                </Button>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane>
+                            <children>
+                                <Button fx:id="btn_stop" maxHeight="30.0" mnemonicParsing="false"
+                                        onAction="#onClick_btn_stop" prefWidth="159.0" text="Stop"
+                                        AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                        AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <font>
+                                        <Font size="14.0"/>
+                                    </font>
+                                </Button>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane>
+                            <children>
+                                <Button fx:id="btn_log" maxHeight="30.0" mnemonicParsing="false"
+                                        onAction="#onClick_btn_log" prefWidth="160.0" text="View log"
+                                        AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                        AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <font>
+                                        <Font size="14.0"/>
+                                    </font>
+                                </Button>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane>
+                            <children>
+                                <Button maxHeight="30.0" mnemonicParsing="false" onAction="#switchToScene1"
+                                        prefWidth="160.0" text="Go back" AnchorPane.bottomAnchor="0.0"
+                                        AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                                        AnchorPane.topAnchor="0.0">
+                                    <font>
+                                        <Font size="14.0"/>
+                                    </font>
+                                </Button>
+                            </children>
+                        </AnchorPane>
+                    </children>
+                </HBox>
+            </children>
+        </AnchorPane>
+    </children>
 </VBox>

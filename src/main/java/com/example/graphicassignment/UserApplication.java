@@ -17,7 +17,7 @@ public class UserApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("fxml/user.fxml")));
-        Scene scene = new Scene(root, 640, 420);
+        Scene scene = new Scene(root, 640, 480);
         String css = Objects.requireNonNull(this.getClass().getResource("style.css")).toExternalForm();
         //Platform.setImplicitExit(false); //Makes program continue running even if you close the program window.
         stage.setResizable(false);

@@ -13,12 +13,10 @@ public class VideoApplication implements Runnable {
     @Override
     public void run() {
         // Avoid throwing IllegalStateException by running from a non-JavaFX thread.
-        Platform.runLater(
-                () -> {
-                    webView.getEngine().load("https://streamable.com/e/shil2");
-                    webView.setPrefSize(640, 360);
-                }
-        );
+        Platform.runLater(() -> {
+            webView.getEngine().load("https://streamable.com/e/shil2");
+            webView.setMaxSize(640, 360);
+        });
 
     }
 }
