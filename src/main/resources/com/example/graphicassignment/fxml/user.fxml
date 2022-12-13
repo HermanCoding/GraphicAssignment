@@ -11,10 +11,10 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<GridPane maxHeight="800" maxWidth="600" minHeight="400.0" minWidth="600.0" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<GridPane xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.graphicassignment.UserController">
   <columnConstraints>
-    <ColumnConstraints hgrow="SOMETIMES" minWidth="440.0" prefWidth="440.0" />
-    <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="200.0" />
+    <ColumnConstraints />
+    <ColumnConstraints />
   </columnConstraints>
   <rowConstraints>
     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -37,15 +37,15 @@
             <Insets />
          </GridPane.margin>
       </TextField>
-      <TextField accessibleRole="TEXT" cacheShape="false" centerShape="false" disable="true" editable="false" focusTraversable="false" pickOnBounds="false" prefHeight="149.0" prefWidth="300.0" promptText="Name" scaleShape="false" styleClass="text-field" text="Your name?">
+      <TextField accessibleRole="TEXT" cacheShape="false" centerShape="false" disable="true" editable="false" focusTraversable="false" pickOnBounds="false" promptText="Name" scaleShape="false" styleClass="text-field" text="Your name?">
          <font>
             <Font size="24.0" />
          </font></TextField>
-      <TextField accessibleRole="TEXT" cacheShape="false" centerShape="false" disable="true" editable="false" focusTraversable="false" prefHeight="268.0" prefWidth="300.0" promptText="Nickname" scaleShape="false" styleClass="text-field" text="Your nickname?" GridPane.rowIndex="2">
+      <TextField accessibleRole="TEXT" cacheShape="false" centerShape="false" disable="true" editable="false" focusTraversable="false" promptText="Nickname" scaleShape="false" styleClass="text-field" text="Your nickname?" GridPane.rowIndex="2">
          <font>
             <Font size="24.0" />
          </font></TextField>
-      <TextField accessibleRole="TEXT" cacheShape="false" centerShape="false" disable="true" editable="false" focusTraversable="false" prefHeight="243.0" prefWidth="300.0" promptText="Song" scaleShape="false" styleClass="text-field" text="Your favurit song?" GridPane.rowIndex="4">
+      <TextField accessibleRole="TEXT" cacheShape="false" centerShape="false" disable="true" editable="false" focusTraversable="false" promptText="Song" scaleShape="false" styleClass="text-field" text="Your favurit song?" GridPane.rowIndex="4">
          <font>
             <Font size="24.0" />
          </font>

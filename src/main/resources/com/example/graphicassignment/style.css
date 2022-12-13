@@ -2,3 +2,7 @@
 -fx-faint-focus-color: transparent;
 -fx-focus-color: transparent;
 }
+
+.background{
+-fx-background-color: #000000
+}

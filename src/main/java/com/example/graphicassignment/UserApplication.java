@@ -16,8 +16,7 @@ public class UserApplication extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(UserApplication.class.getResource("fxml/user.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 640, 420);
-        stage.setMinWidth(640);
-        stage.setMinHeight(360);
+        stage.setResizable(false);
         stage.setTitle("Trolleri Trollera");
         stage.setScene(scene);
         stage.show();
