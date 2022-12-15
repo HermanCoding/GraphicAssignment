@@ -12,7 +12,7 @@
     <children>
         <AnchorPane>
             <children>
-                <TextField fx:id="text_user" accessibleRole="TEXT" alignment="CENTER" editable="false" maxHeight="30.0" maxWidth="640.0" stylesheets="@../style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                <TextField fx:id="text_user" accessibleRole="TEXT" alignment="CENTER" editable="false" maxHeight="90.0" maxWidth="640.0" minHeight="90.0" stylesheets="@../style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <font>
                         <Font size="18.0" />
                     </font>

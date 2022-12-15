@@ -4,12 +4,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="480.0" maxWidth="640.0" minHeight="480.0" minWidth="640.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.graphicassignment.LogController">
-   <children>
-      <TextArea fx:id="textArea" editable="false" focusTraversable="false" maxHeight="480.0" maxWidth="640.0" minHeight="480.0" minWidth="640.0" prefHeight="480.0" prefWidth="640.0" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <font>
-            <Font name="Calibri" size="18.0" />
-         </font>
-      </TextArea>
-   </children>
+<AnchorPane maxHeight="480.0" maxWidth="640.0" minHeight="480.0" minWidth="640.0" xmlns="http://javafx.com/javafx/19"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.graphicassignment.LogController">
+   <TextArea fx:id="textArea" editable="false" focusTraversable="false" maxHeight="480.0" maxWidth="640.0"
+             minHeight="480.0" minWidth="640.0" prefHeight="480.0" prefWidth="640.0" wrapText="true"
+             AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+             AnchorPane.topAnchor="0.0">
+      <font>
+         <Font name="Calibri" size="18.0"/>
+      </font>
+   </TextArea>
 </AnchorPane>

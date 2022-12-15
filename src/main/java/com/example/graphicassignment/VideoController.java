@@ -29,10 +29,16 @@ public class VideoController implements Initializable {
     private Stage stage;
     private Scene scene;
     private Parent root;
+
+    //TODO gör så att tråden stoppar om man lämnar scenen.
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
+        text_user.setText("Hej Namn som helst vill bli kallad Smeknamn!!\n" +
+                "och du gissade det, din favoritlåt är: ");
+
         videoApplication.InitializeVideoApplication(webView);
+        videoThread.isDaemon();
         videoThread.start();
     }
 

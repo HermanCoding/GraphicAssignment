@@ -1,5 +1,6 @@
 package com.example.graphicassignment;
 
+import javafx.beans.binding.Bindings;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -32,6 +33,7 @@ public class UserController implements Initializable {
     private Scene scene;
     private Parent root;
 
+    //TODO Gör så man måste skriva in data i fälten för att få gå vidare.
     public void switchToScene2(ActionEvent event) throws IOException {
         name = textField_name.getText();
         lastname = textField_lastname.getText();
@@ -48,7 +50,7 @@ public class UserController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
+        btn_push.disableProperty().bind(Bindings.isEmpty(textField_name.textProperty()).or(Bindings.isEmpty(textField_lastname.textProperty())));
     }
 
     //TODO Om tid finns gör så att namnet hamnar högst upp i textfilen.
