@@ -9,6 +9,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.web.WebView;
 import javafx.stage.Stage;
 
@@ -63,5 +64,13 @@ public class VideoController implements Initializable {
         scene = new Scene(root, 640, 480);
         stage.setScene(scene);
         stage.show();
+    }
+    @FXML
+    private void receiveData(MouseEvent event) {
+        Node node = (Node) event.getSource();
+        Stage stage = (Stage) node.getScene().getWindow();
+        User u = (User) stage.getUserData();
+        String name = u.getName();
+        String lastName = u.getLastName();
     }
 }
