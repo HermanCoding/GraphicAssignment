@@ -38,6 +38,7 @@ public class UserController implements Initializable {
         song = "Never Gonna Give You Up by Rick Astley";
         saveToFile();
         User user = new User(name, lastname, song);
+
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("fxml/video.fxml")));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root, 640, 480);
@@ -50,31 +51,14 @@ public class UserController implements Initializable {
 
     }
 
+    //TODO Om tid finns gör så att namnet hamnar högst upp i textfilen.
     public void saveToFile() {
         try {
             BufferedWriter writer = new BufferedWriter(new FileWriter("user.txt", true));
             writer.append(name + " " + lastname + " really loves the song " + song + "\n");
             writer.close();
         } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-
-    }
-
-    public void sendData(javafx.scene.input.MouseEvent mouseEvent) {
-
-        //Typecastar eventet till en Node
-        stage = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
-        stage.close();
-        try {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("fxml/user.fxml")));
-            //setUserData är en javaFX metod för att knyta an ett objekt till "class Node". Detta för att kunna använda objektet senare.
-            //stage.setUserData(user);
-            Scene scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
-        } catch (IOException e) {
-            System.err.printf("Error: %s%n", e.getMessage());
+            e.printStackTrace();
         }
     }
 }
