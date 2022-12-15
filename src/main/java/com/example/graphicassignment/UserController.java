@@ -29,9 +29,6 @@ public class UserController implements Initializable {
     private TextField textField_name;
     @FXML
     private TextField textField_lastname;
-    private Stage stage;
-    private Scene scene;
-    private Parent root;
 
     //TODO Gör så man måste skriva in data i fälten för att få gå vidare.
     public void switchToScene2(ActionEvent event) throws IOException {
@@ -40,10 +37,13 @@ public class UserController implements Initializable {
         song = "Never Gonna Give You Up by Rick Astley";
         saveToFile();
         User user = new User(name, lastname, song);
+        FXMLLoader loader = new FXMLLoader(Objects.requireNonNull(getClass().getResource("fxml/video.fxml")));
+        Parent root = loader.load();
+        VideoController videoController = loader.getController();
+        videoController.userData(user);
 
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("fxml/video.fxml")));
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root, 640, 480);
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root, 640, 480);
         stage.setScene(scene);
         stage.show();
     }
@@ -57,7 +57,7 @@ public class UserController implements Initializable {
     public void saveToFile() {
         try {
             BufferedWriter writer = new BufferedWriter(new FileWriter("user.txt", true));
-            writer.append(name + " " + lastname + " really loves the song " + song + "\n");
+            writer.write(name + " " + lastname + " really loves the song " + song + "\n");
             writer.close();
         } catch (IOException e) {
             e.printStackTrace();
