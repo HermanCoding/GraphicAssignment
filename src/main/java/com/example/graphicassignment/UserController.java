@@ -32,16 +32,19 @@ public class UserController implements Initializable {
 
     //TODO Gör så man måste skriva in data i fälten för att få gå vidare.
     public void switchToScene2(ActionEvent event) throws IOException {
+        //Store data in User
         name = textField_name.getText();
         lastname = textField_lastname.getText();
         song = "Never Gonna Give You Up by Rick Astley";
-        saveToFile();
         User user = new User(name, lastname, song);
+        //Save to log file
+        saveToFile();
+        //Push data to scene "video"
         FXMLLoader loader = new FXMLLoader(Objects.requireNonNull(getClass().getResource("fxml/video.fxml")));
         Parent root = loader.load();
         VideoController videoController = loader.getController();
         videoController.userData(user);
-
+        //Change scene
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root, 640, 480);
         stage.setScene(scene);
@@ -50,10 +53,10 @@ public class UserController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        //Disable button when data is empty in name / lastname.
         btn_push.disableProperty().bind(Bindings.isEmpty(textField_name.textProperty()).or(Bindings.isEmpty(textField_lastname.textProperty())));
     }
 
-    //TODO Om tid finns gör så att namnet hamnar högst upp i textfilen.
     public void saveToFile() {
         try {
             BufferedWriter writer = new BufferedWriter(new FileWriter("user.txt", true));

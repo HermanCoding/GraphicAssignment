@@ -17,7 +17,6 @@ public class VideoApplication implements Runnable {
             webView.getEngine().load("https://streamable.com/e/shil2");
             webView.setMaxSize(640, 360);
         });
-
     }
 }
 

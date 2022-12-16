@@ -34,15 +34,12 @@ public class VideoController implements Initializable {
         String lastName = user.getLastName();
         String song = user.getSong();
         text_user.setText("Hej "+ name +" "+ lastName +" !!!\n" +
-                "och din absoluta favoritlåt är: \n"+ song);
+                "och din absoluta favoritlåt är: \n"+ song +"\nDetta har blivit sparat till loggfilen.");
     }
 
     //TODO gör så att tråden stoppar om man lämnar scenen.
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
-
-
         videoApplication.InitializeVideoApplication(webView);
         videoThread.isDaemon();
         videoThread.start();
