@@ -30,7 +30,11 @@ public class UserController implements Initializable {
     @FXML
     private TextField textField_lastname;
 
-    //TODO Gör så man måste skriva in data i fälten för att få gå vidare.
+
+//Constructors for testing
+
+// ----
+
     public void switchToScene2(ActionEvent event) throws IOException {
         //Store data in User
         name = textField_name.getText();
